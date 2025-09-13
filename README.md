@@ -84,11 +84,20 @@ Go to Alerting → Alert rules and create rules:
 High CPU usage (>20% for 3 mins)
 100 - (avg by (instance) (rate(node_cpu_seconds_total{mode="idle"}[3m])) * 100) > 20
 
+<img width="1302" height="654" alt="image" src="https://github.com/user-attachments/assets/4245c919-b29e-43dd-8f03-ed3a955ff25f" />
+<img width="1274" height="702" alt="image" src="https://github.com/user-attachments/assets/eaadee76-6919-471a-814a-28be2839bec7" />
+<img width="1292" height="697" alt="image" src="https://github.com/user-attachments/assets/67dcb696-fb22-452d-a1be-822478999b46" />
+
+
+
 Low memory (<20%)
 (node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes) * 100 < 20
 
 Container not running (1 min)
 sum(container_last_seen{container_label_com_docker_swarm_service_name!=""}) < 1
+
+<img width="2608" height="1368" alt="image" src="https://github.com/user-attachments/assets/311a0fab-d824-431f-9b91-57858eb56e15" />
+
 
 Step 5: Integrate Gmail as Contact Point
 
@@ -97,6 +106,8 @@ Go to Alerting → Contact points.
 Create a new contact point → choose Email.
 
 Enter Gmail address (e.g., your_gmail@gmail.com).
+<img width="1296" height="677" alt="image" src="https://github.com/user-attachments/assets/a421c3c0-57e3-457d-9150-605d817fad35" />
+
 
 Configure Grafana SMTP
 
@@ -109,7 +120,6 @@ Edit /etc/grafana/grafana.ini:
     password = your_app_password
     from_address = your_gmail@gmail.com
     from_name = Grafana
-
 
 ⚠️ For Gmail, you must generate an App Password (from Google Account → Security → App Passwords).
 
@@ -128,3 +138,9 @@ Test email → Alerts should now be sent.
 - Prometheus integrated with Grafana
 -  Alert rules for CPU, memory, container state
 - Email alerts sent to Gmail
+
+
+<img width="2592" height="1378" alt="image" src="https://github.com/user-attachments/assets/76d2a448-f3fa-4b98-9d6a-8d5b497a704e" />
+
+
+
