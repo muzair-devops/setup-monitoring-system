@@ -143,4 +143,19 @@ Test email → Alerts should now be sent.
 <img width="2592" height="1378" alt="image" src="https://github.com/user-attachments/assets/76d2a448-f3fa-4b98-9d6a-8d5b497a704e" />
 
 
+🧪 6. Testing Alerts
+
+    #Test High CPU
+    sudo apt install stress-ng -y
+    stress-ng --cpu 4 --timeout 300
+    
+    #Test Low Memory
+    stress-ng --vm 1 --vm-bytes 80% --timeout 300
+    
+    #Test Container Not Running
+    sudo docker stop cadvisor
+    # Restart later:
+    sudo docker start cadvisor
+
+
 
