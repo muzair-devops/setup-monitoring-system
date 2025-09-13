@@ -69,6 +69,8 @@ cAdvisor → http://localhost:8080
 Grafana → http://localhost:3000
  (default login: admin/admin)
 
+ 
+
 Step 3: Add Prometheus as Datasource in Grafana
 
 Go to Grafana → Connections → Data sources.
