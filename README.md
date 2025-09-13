@@ -4,11 +4,10 @@ The is about setting up Prometheus, Grafana, Node Exporter, and cAdvisor on Ubun
 
 Step 1: Install Prometheus, Grafana, Node Exporter & cAdvisor 
 
-    # Update system:
-    sudo apt update && sudo apt upgrade -y
-          
-    #Install Prometheus:
-        
+      # Update system:
+     sudo apt update && sudo apt upgrade -y
+              
+      #Install Prometheus:
       # Create user
       sudo useradd --no-create-home --shell /bin/false prometheus  
       # Create directories
