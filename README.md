@@ -132,19 +132,6 @@ Restart Grafana:
 
 Test email → Alerts should now be sent.
 
-
-
-
-✅ At this point you’ll have:
--  Prometheus, Grafana, Node Exporter & cAdvisor installed
-- Prometheus integrated with Grafana
--  Alert rules for CPU, memory, container state
-- Email alerts sent to Gmail
-
-
-<img width="2592" height="1378" alt="image" src="https://github.com/user-attachments/assets/76d2a448-f3fa-4b98-9d6a-8d5b497a704e" />
-
-
 🧪 6. Testing Alerts
 
     #Test High CPU
@@ -158,6 +145,17 @@ Test email → Alerts should now be sent.
     sudo docker stop cadvisor
     # Restart later:
     sudo docker start cadvisor
+
+
+✅ At this point you’ll have:
+-  Prometheus, Grafana, Node Exporter & cAdvisor installed
+- Prometheus integrated with Grafana
+-  Alert rules for CPU, memory, container state
+- Email alerts sent to Gmail
+
+
+<img width="2592" height="1378" alt="image" src="https://github.com/user-attachments/assets/76d2a448-f3fa-4b98-9d6a-8d5b497a704e" />
+
 
 
 
